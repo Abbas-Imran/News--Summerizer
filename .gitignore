@@ -3,6 +3,8 @@ frontend/node_modules/
 
 # Ignore node_modules in backend
 backend/node_modules/
+frontend/.env/
+backend/.env/
 These lines will instruct Git to ignore the node_modules directory in both the frontend and backend folders.
 
 Save the .gitignore file.
