@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import NewsTypeContainer from "./HomePageComponents/NewsTypeContainer";
-import NewsContainer from "./NewsContainer";
+import NewsContainer from "./HomePageComponents/NewsContainer";
 
 function HomePage() {
   const [newsType, setNewsType] = useState("Home");

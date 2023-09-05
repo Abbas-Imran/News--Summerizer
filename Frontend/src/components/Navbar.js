@@ -1,7 +1,6 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import { styled, alpha } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -10,7 +9,6 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import TextField from "@mui/material/TextField";
 import { AuthContext } from "./store/auth-context";
 
 
@@ -21,9 +19,7 @@ function ResponsiveAppBar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [userName, setUserName] = React.useState("");
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -63,6 +59,7 @@ function ResponsiveAppBar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              flexGrow: 1,
             }}
           >
             Readme.
@@ -86,17 +83,6 @@ function ResponsiveAppBar() {
           >
             Readme.
           </Typography>
-          <Box sx={{ flexGrow: 1, display: "flex", borderRadius: '50px' }}>
-            <TextField
-              id="email"
-              label="Email"
-              margin="normal"
-              sx={{
-                borderRadius: '50px', 
-              }}
-            />
-          </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

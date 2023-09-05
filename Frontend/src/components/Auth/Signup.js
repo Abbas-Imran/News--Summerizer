@@ -222,6 +222,7 @@ theme="dark"
               onChange={onChangeHandler}
               required = {true}
                 name="password"
+                type="password"
               sx={{ width: "55%" }}
             />
           </Box>
